@@ -22,6 +22,7 @@
 --button-list-shad2:rgba(0, 0, 0, 0.08);
 --button-list-shad3:rgba(0, 0, 0, 0.12);
 --hat-button-close-border:rgba(0, 0, 0, 0.1);
+--hat-button-hover:#188CE8;
 }
 /* Root end */
 
@@ -204,6 +205,12 @@ display: block;
 padding: 10px 32px 10px 32px;
 border-radius: 4px;
 border: none;
+transition-property: background;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hat-button-open:hover {
+background: var(--hat-button-hover);
 }
 /* is-hidden */
 .backdrop.is-hidden {
@@ -242,7 +249,8 @@ cursor: pointer;
 width: 30px;
 height: 30px;
 margin: 0;
-margin-left: 94%;
+top:0;
+right:0;
 display: block;
 border: 1px solid var(--hat-button-close-border);
 border-radius: 100%;
